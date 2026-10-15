@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+         function getAverageGrade(grades) {
+        if (grades.length === 0) return 0;
+        return grades.reduce((acc, g) => acc + g, 0) / grades.length;
+    }
+
+
+    const grades8 = Array.of(5, 4, 3, 5, 5, 4);
+    const result8 = getAverageGrade(grades8);
+    
+    console.log("Задание 8 Средний балл:", result8);
+    alert("Задание 8 (Средний балл): " + result8.toFixed(2));
+                 </script>
+</body>
+</html

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function shortFIO(fullName) {
+        let parts = fullName.split(/\s+/).filter(p => p !== "");
+        if (parts.length < 3) return fullName;
+        
+
+        let letter1 = parts.at(0).charAt(0).toUpperCase();
+        let letter2 = parts.at(1).charAt(0).toUpperCase();
+        let letter3 = parts.at(2).charAt(0).toUpperCase();
+        
+        return letter1 + "." + letter2 + "." + letter3;
+    }
+
+
+    const fio10 = "Иванов Петр Сидорович";
+    const result10 = shortFIO(fio10);
+    
+    console.log("Задание 10:", result10);
+    alert("\nПолное: " + fio10 + "\nСокращенное: " + result10);
+     </script>
+</body>
+</html>

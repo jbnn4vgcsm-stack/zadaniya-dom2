@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+            function countWords(text) {
+        let words = text.toLowerCase().split(/\s+/);
+        let result = {};
+        for (let i = 0; i < words.length; i++) {
+            let w = words[i];
+            if (w === "") continue;
+            result[w] = (result[w] || 0) + 1;
+        }
+        return result;
+    }
+
+    const text6 = "рыба кот рыба собака кот рыба";
+    const result6 = countWords(text6);
+    
+    console.log("Задание 6:", result6);
+    alert("Задание 6 (Повторы слов):\n" + JSON.stringify(result6, null, 2));
+            </script>
+</body>
+</html>

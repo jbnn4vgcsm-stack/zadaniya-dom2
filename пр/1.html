@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+</head>
+<body>
+
+    <script>
+        function getUnique(array) {
+            return Array.from(new Set(array));
+        }
+
+
+        const testArray = Array.of(1, 2, 2, 3, 4, 4, 5);
+        const result = getUnique(testArray);
+
+    
+        console.log("Результат в консоли:", result); 
+        alert("Результат в окне: " + result.join(", "));
+    </script>
+
+</body>
+</html>
+
+  

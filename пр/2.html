@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сортировка массива</title>
+</head>
+<body>
+<script>
+
+    function filterPositive(array) {
+        return array.filter(num => num > 0);
+    }
+
+    const array2 = Array.of(-5, 12, 0, -3, 7);
+    const result2 = filterPositive(array2);
+    
+    console.log("Задание 2:", result2);
+    alert("Задание 2 (Положительные): " + result2.join(", "));
+</script>
+</body>
+</html>
+

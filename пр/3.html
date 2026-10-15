@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+
+    function getSumAndAverage(array) {
+        if (array.length === 0) return { sum: 0, average: 0 };
+        let sum = array.reduce((acc, n) => acc + n, 0);
+        return { sum: sum, average: sum / array.length };
+    }
+
+
+    const array3 = Array.of(10, 20, 30, 40);
+    const result3 = getSumAndAverage(array3);
+    
+    console.log("Задание 3:", result3);
+    alert("Задание 3:\nСумма: " + result3.sum + "\nСреднее: " + result3.average);
+    </script>
+</body>
+</html>

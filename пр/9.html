@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function transliterate(text) {
+        const rualf = {"а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ё":"yo","ж":"zh","з":"z","и":"i","й":"y","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"kh","ц":"ts","ч":"ch","ш":"sh","щ":"shch","ъ":"","ы":"y","ь":"","э":"e","ю":"yu","я":"ya"};
+        return text.split('').map(char => {
+            let lower = char.toLowerCase();
+            if (rualf[lower] !== undefined) {
+                return char === char.toUpperCase() ? rualf[lower].toUpperCase() : rualf[lower];
+            }
+            return char;
+        }).join('');
+    }
+
+    const text9 = "Привет Мир";
+    const result9 = transliterate(text9);
+    
+    console.log("Задание 9 транслит:", result9);
+    alert("Задание 9:\nОригинал: " + text9 + "\nТранслит: " + result9);
+                  </script>
+</body>
+</html>

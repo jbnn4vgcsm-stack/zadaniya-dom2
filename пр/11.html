@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+         function groupByAge(users) {
+        let result = { children: Array.from([]), adults: Array.from([]) };
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].age < 18) {
+                result.children.push(users[i]);
+            } else {
+                result.adults.push(users[i]);
+            }
+        }
+        return result;
+    }
+
+    const people11 = Array.from([
+        { name: "Антон", age: 16 },
+        { name: "Борис", age: 23 },
+        { name: "Елена", age: 12 },
+        { name: "Ольга", age: 41 }
+    ]);
+    
+    const result11 = groupByAge(people11);
+    
+    let textChildren = result11.children.map(p => p.name + " (" + p.age + " лет)").join(", ");
+    let textAdults = result11.adults.map(p => p.name + " (" + p.age + " лет)").join(", ");
+    
+    let finalOutput = "(Группировка по возрасту):\n\n" +
+                      " Дети (до 18 лет): " + (textChildren || "нет") + "\n" +
+                      " Взрослые (18+): " + (textAdults || "нет");
+
+    console.log(result11); 
+    alert(finalOutput);    
+           </script>
+</body>
+</html>

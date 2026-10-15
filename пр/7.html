@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function getSecondLargest(array) {
+        let uniqueArr = Array.from(new Set(array)).sort((a, b) => b - a);
+        return uniqueArr.length < 2 ? null : uniqueArr;
+    }
+
+    const array7 = Array.of(20, 5, 20, 12, 3, 12);
+    const result7 = getSecondLargest(array7);
+    
+    console.log("Задание 7:", result7);
+    alert("Задание 7 (Второе макс. число из 20,5,20,12,3,12): " + result7);
+          </script>
+</body>
+</html>
